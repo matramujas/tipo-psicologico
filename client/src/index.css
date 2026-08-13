@@ -1,0 +1,188 @@
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Paleta de cores minimalista e orgânica */
+  --color-terracota: #c97a5c;
+  --color-ocre: #d4a574;
+  --color-verde-salvia: #8b9d6f;
+  --color-creme: #faf7f2;
+  --color-creme-escuro: #fefbf7;
+  --color-marrom-escuro: #5a4a42;
+  --color-marrom-medio: #6b5b52;
+  --color-marrom-claro: #a89080;
+  --color-bege-claro: #e8ddd3;
+  --color-bege-medio: #f0e8e0;
+  --color-bege-escuro: #f5f0eb;
+
+  /* Tailwind colors */
+  --primary: var(--color-verde-salvia);
+  --primary-foreground: var(--color-creme-escuro);
+  --sidebar-primary: var(--color-verde-salvia);
+  --sidebar-primary-foreground: var(--color-creme-escuro);
+  --chart-1: var(--color-verde-salvia);
+  --chart-2: var(--color-terracota);
+  --chart-3: var(--color-ocre);
+  --chart-4: var(--color-marrom-claro);
+  --chart-5: var(--color-bege-medio);
+  --radius: 0.65rem;
+  --background: var(--color-creme);
+  --foreground: var(--color-marrom-escuro);
+  --card: var(--color-creme-escuro);
+  --card-foreground: var(--color-marrom-escuro);
+  --popover: var(--color-creme-escuro);
+  --popover-foreground: var(--color-marrom-escuro);
+  --secondary: var(--color-bege-escuro);
+  --secondary-foreground: var(--color-marrom-medio);
+  --muted: var(--color-bege-claro);
+  --muted-foreground: var(--color-marrom-claro);
+  --accent: var(--color-terracota);
+  --accent-foreground: var(--color-creme-escuro);
+  --destructive: #ef4444;
+  --destructive-foreground: var(--color-creme-escuro);
+  --border: var(--color-bege-claro);
+  --input: var(--color-bege-claro);
+  --ring: var(--color-verde-salvia);
+  --sidebar: var(--color-creme-escuro);
+  --sidebar-foreground: var(--color-marrom-escuro);
+  --sidebar-accent: var(--color-bege-escuro);
+  --sidebar-accent-foreground: var(--color-marrom-escuro);
+  --sidebar-border: var(--color-bege-claro);
+  --sidebar-ring: var(--color-verde-salvia);
+}
+
+.dark {
+  --primary: var(--color-verde-salvia);
+  --primary-foreground: var(--color-creme-escuro);
+  --sidebar-primary: var(--color-verde-salvia);
+  --sidebar-primary-foreground: var(--color-creme-escuro);
+  --background: var(--color-marrom-escuro);
+  --foreground: var(--color-creme-escuro);
+  --card: var(--color-marrom-medio);
+  --card-foreground: var(--color-creme-escuro);
+  --popover: var(--color-marrom-medio);
+  --popover-foreground: var(--color-creme-escuro);
+  --secondary: var(--color-marrom-claro);
+  --secondary-foreground: var(--color-creme-escuro);
+  --muted: var(--color-marrom-claro);
+  --muted-foreground: var(--color-bege-claro);
+  --accent: var(--color-terracota);
+  --accent-foreground: var(--color-creme-escuro);
+  --destructive: #ef4444;
+  --destructive-foreground: var(--color-creme-escuro);
+  --border: var(--color-marrom-claro);
+  --input: var(--color-marrom-claro);
+  --ring: var(--color-verde-salvia);
+  --chart-1: var(--color-verde-salvia);
+  --chart-2: var(--color-terracota);
+  --chart-3: var(--color-ocre);
+  --chart-4: var(--color-marrom-claro);
+  --chart-5: var(--color-bege-medio);
+  --sidebar: var(--color-marrom-medio);
+  --sidebar-foreground: var(--color-creme-escuro);
+  --sidebar-accent: var(--color-marrom-claro);
+  --sidebar-accent-foreground: var(--color-creme-escuro);
+  --sidebar-border: var(--color-marrom-claro);
+  --sidebar-ring: var(--color-verde-salvia);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.3px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    display: flex;
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .text-uppercase-small {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
