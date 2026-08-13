@@ -50,7 +50,11 @@ export async function sendResultToAdmin(
     P: number;
   }
 ): Promise<boolean> {
+  throw new Error("FUNÇÃO EXECUTADA");
+
   const typeNames: Record<string, string> = {
+    // ...
+  };
     ISTJ: "O Logístico",
     ISFJ: "O Defensor",
     INFJ: "O Advogado",
