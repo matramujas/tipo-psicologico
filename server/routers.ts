@@ -123,6 +123,7 @@ export const appRouter = router({
           }
         } catch (error) {
           console.error("[ERROR] Erro ao enviar resultado ao administrador:", error);
+          throw error;
         }
 
         return {
