@@ -45,6 +45,8 @@ export default function Home() {
       });
     } catch (error) {
       console.error("Erro ao salvar resultado:", error);
+      alert(String(error));
+      return;
     }
 
     setPageState("result");
