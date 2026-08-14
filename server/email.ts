@@ -54,7 +54,6 @@ export async function sendResultToAdmin(
 
   const typeNames: Record<string, string> = {
     // ...
-  };
     ISTJ: "O Logístico",
     ISFJ: "O Defensor",
     INFJ: "O Advogado",
